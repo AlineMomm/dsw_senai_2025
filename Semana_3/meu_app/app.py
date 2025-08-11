@@ -4,7 +4,6 @@ app = Flask(__name__)
 
 # render_template = levar para outra página
 # request = pegar dados do usuário
-#@app.route('/sobre')  # rota para a página "sobre"
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
@@ -18,5 +17,3 @@ def index():
 
 if __name__ == '__main__':  # só roda se for o arquivo principal
     app.run(debug=True)     # debug=True = reinicia o servidor automaticamente quando salva o arquivo
-    
-    
