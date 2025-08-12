@@ -1,0 +1,13 @@
+ALUNO: ALINE MAYSA MOMM
+
+Objetivo:
+Criar uma página HTML com um formulário de cadastro estilizado com CSS, enviando
+dados para o Flask.
+O botão de envio deve ficar centralizado e com aparência personalizada.
+
+Critérios de avaliação
+- Estrutura de pastas correta (static e templates)
+- Uso de CSS externo para estilizar o formulário
+- Botão centralizado conforme especificado
+- Recebimento dos dados no Flask e exibição na tela de sucesso
+- Código organizado e legível

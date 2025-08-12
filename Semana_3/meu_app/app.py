@@ -13,7 +13,7 @@ def index():
         mensagem = request.form.get("mensagem")
         return render_template('resultado.html', nome=nome, email=email, mensagem=mensagem)
     
-    return render_template('index.html')
+    return render_template('cadastro.html')
 
 if __name__ == '__main__':  # só roda se for o arquivo principal
     app.run(debug=True)     # debug=True = reinicia o servidor automaticamente quando salva o arquivo
