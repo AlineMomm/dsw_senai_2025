@@ -11,10 +11,29 @@
     <h1><strong>Lista de tarefas</strong></h1>
     <ol>
         {% for tarefa in tarefas %}
-            <li>{{ tarefa[0] }} - {{ tarefa[1] }}</li>
+            
+            <li>
+                {{ tarefa[0] }} - {{ tarefa[1] }}
+                <form method="POST" action="{{ url_for('excluir', indice=loop.index0) }}" style="display:inline;">
+                    <button type="submit" class="btn-excluir">X</button>
+                </form>
+            </li>
+        
         {% endfor %}
+
+        {% if not tarefas %}
+            <li style="list-style: none;">Nenhuma tarefa adicionada ainda.</li>
+        {% endif %}
     </ol>
+
+    <div class= limpar_lista>
+        <form method="POST" action="{{ url_for('limpar') }}">
+            <button type="submit">Limpar Lista</button>
+        </form>
+    </div>
+
 </div>
+
 <div class="adicionar_tarefa">
     <form method="POST">
         <label for="tarefa">Tarefa:</label>
@@ -26,6 +45,5 @@
         <button type="submit">Adicionar</button>
     </form>
 </div>
-
 </body>
 </html>

@@ -20,4 +20,9 @@ Ideias de melhorias:
 - Botao de excluir ao lado do item da lista
 - Botão de limpar lista 
 - Filtrar ordem da lista pela data limite (importância)
+<<<<<<< Updated upstream
     - if data anterior > nova data = adicionar ao final da lista
+=======
+    - if data anterior <= nova data = adicionar ao final da lista
+- (FEITO) transformar data para DIA-MÊS-ANO 
+>>>>>>> Stashed changes
