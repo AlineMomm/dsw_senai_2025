@@ -1,0 +1,11 @@
+4. Como Executar a Aplicação Completa
+  1. Crie a estrutura de pastas e salve cada arquivo no seu devido lugar.
+  2. Abra o terminal na pasta principal do projeto (meu_projeto_flask).
+  3. Execute o servidor Flask com o comando:
+  python app.py
+  4. Acesse as URLs no seu navegador para ver cada exercício em ação:
+  ○ Exercício 1: http://127.0.0.1:5000/bemvindo
+  ○ Exercício 2: http://127.0.0.1:5000/cursos
+  ○ Exercício 3 (não logado): http://127.0.0.1:5000/perfil
+  ○ Exercício 3 (logado): http://127.0.0.1:5000/perfil/Ana
+  ○ Exercício 4: http://127.0.0.1:5000/sobre
