@@ -1,8 +1,7 @@
 Semana 3 - Desafio
 
 Objetivo:
-Criar um sistema simples de Lista de Tarefas com Flask, permitindo adicionar tarefas por
-meio de um formulário e exibir as tarefas já cadastradas em uma tabela estilizada com CSS
+Criar um sistema simples de Lista de Tarefas com Flask, permitindo adicionar tarefas por meio de um formulário e exibir as tarefas já cadastradas em uma tabela estilizada com CSS
 
 Critérios de Avaliação
 - Código organizado (pastas static e templates)
