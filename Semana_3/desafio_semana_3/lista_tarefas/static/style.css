@@ -1,0 +1,114 @@
+/* Fonte padrão */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Containers */
+.lista_tarefas, .adicionar_tarefa, .nova_tarefa {
+    max-width: 500px;
+    margin: 30px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Títulos */
+h1 {
+    text-align: center;
+    color: rgb(11, 56, 0);
+    margin-bottom: 20px;
+}
+
+/* Lista de tarefas */
+.lista_tarefas ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.lista_tarefas li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Efeito Zebra */
+.lista_tarefas li:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Form de adicionar tarefa */
+.adicionar_tarefa form {
+    display: flex;
+    flex-direction: column;
+}
+
+.adicionar_tarefa label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.adicionar_tarefa input {
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+/* Botão Adicionar */
+.adicionar_tarefa button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 200px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 20px auto 0 auto; /* centraliza */
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.adicionar_tarefa button:hover {
+    background-color: #218838;
+}
+
+/* Sucesso */
+.nova_tarefa h1 {
+    color: #28a745;
+    text-align: center;
+}
+
+.nova_tarefa ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.nova_tarefa li {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+.nova_tarefa a {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #007bff;
+    padding: 10px;
+    border-radius: 5px;
+    width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nova_tarefa a:hover {
+    background-color: #0069d9;
+}

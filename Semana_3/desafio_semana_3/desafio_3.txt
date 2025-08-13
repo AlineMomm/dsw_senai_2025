@@ -1,0 +1,24 @@
+Semana 3 - Desafio
+
+Objetivo:
+Criar um sistema simples de Lista de Tarefas com Flask, permitindo adicionar tarefas por
+meio de um formulário e exibir as tarefas já cadastradas em uma tabela estilizada com CSS
+
+Critérios de Avaliação
+- Código organizado (pastas static e templates)
+- Uso de CSS externo para formatação
+- Tabela com bordas, cores e linhas alternadas
+- Formulário funcional com dados aparecendo na tabela
+- Botão centralizado corretamente
+
+Dicas
+- Criar uma lista Python para armazenar as tarefas durante a execução.
+- Usar render_template passando a lista para o HTML.
+- Pesquisar sobre nth-child(even) no CSS para criar o efeito "zebra" na tabela.
+- Usar url_for('static', filename='style.css') para linkar o CSS.
+
+Ideias de melhorias:
+- Botao de excluir ao lado do item da lista
+- Botão de limpar lista 
+- Filtrar ordem da lista pela data limite (importância)
+    - if data anterior > nova data = adicionar ao final da lista
