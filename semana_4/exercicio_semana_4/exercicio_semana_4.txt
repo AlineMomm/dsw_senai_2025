@@ -1,0 +1,47 @@
+Objetivo:
+Praticar a criação de formulários com Flask-WTF, utilizando diferentes tipos de campos e
+validadores mais complexos para construir um formulário de registro de usuário robusto e
+seguro.
+
+Tarefa:
+Modifique a aplicação Flask existente para incluir um novo "Formulário de Registro". Este
+formulário deverá ter uma nova página (por exemplo, na rota /registro) e conter os
+seguintes campos:
+
+1. Nome Completo: (Já existe, pode reutilizar) StringField, obrigatório.
+
+2. E-mail: (Já existe, pode reutilizar) StringField, obrigatório e com formato de e-mail
+válido.
+
+3. Senha: Um campo para a senha. Por segurança, ele não deve mostrar o texto digitado.
+    a. Validação 1: A senha deve ser obrigatória.
+    b. Validação 2: A senha deve ter no mínimo 8 caracteres.
+
+4. Confirmar Senha: Um segundo campo de senha para garantir que o usuário não digitou
+    a senha errada.
+    a. Validação: O valor deste campo deve ser idêntico ao do campo "Senha".
+
+5. Biografia: Uma área de texto maior para o usuário escrever um pouco sobre si. Este
+campo é opcional.
+
+6. Aceitar Termos: Uma caixa de seleção (checkbox) que o usuário deve marcar para
+concordar com os termos de serviço. O formulário não pode ser enviado sem que esta
+caixa esteja marcada.
+
+7. Botão de Envio: Um botão para submeter o formulário com o texto "Registrar".
+Dicas:
+
+● Crie uma nova classe de formulário, como FormularioRegisto(FlaskForm).
+● Pesquise na documentação do WTForms ou utilize os seguintes componentes:
+    ○ Para a senha: PasswordField
+    ○ Para a biografia: TextAreaField
+    ○ Para a caixa de seleção: BooleanField
+● Para os validadores, importe e utilize:
+    ○ Length(min=8) para o tamanho da senha.
+    ○ EqualTo('nome_do_campo_de_senha') para a confirmação da senha.
+● Não se esqueça de criar uma nova rota e um novo template HTML para a página de
+registro.
+
+Desafio Extra:
+Após o envio bem-sucedido, exiba uma mensagem flash de boas-vindas que inclua o
+nome do usuário e um trecho da sua biografia, caso ele a tenha preenchido.
