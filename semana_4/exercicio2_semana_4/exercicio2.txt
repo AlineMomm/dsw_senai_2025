@@ -1,0 +1,16 @@
+Objetivo: Modificar a aplicação Flask existente para transformar o formulário de "Contato"
+em um formulário de "Cadastro de Evento", adicionando novos campos e validadores.
+Nível: Iniciante / Intermediário
+Contexto
+Você recebeu a tarefa de alterar uma página de contato simples para que ela se torne uma
+página de cadastro de eventos para a comunidade. O formulário precisa coletar
+informações mais específicas sobre o evento que será cadastrado.
+
+Desafio Extra (Para quem terminar antes)
+1. Adicione um Campo de Seleção: Adicione um campo tipo_evento do tipo
+SelectField ao formulário. As opções devem ser "Palestra", "Workshop",
+"Meetup" e "Outro". (Dica: importe SelectField e veja na documentação como
+popular as choices).
+2. Validação Condicional: Faça com que o campo mensagem (que pode ser
+renomeado para descricao) se torne obrigatório apenas se o tipo_evento
+selecionado for "Outro".
