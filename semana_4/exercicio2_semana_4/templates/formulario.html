@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo Flask-WTF - {{ title }}</title>
+</head>
+<body>
+    <h1>{{ title }}</h1>
+    <p><a href="/">Voltar para o início</a></p>
+    <hr>
+
+    <!-- O formulário começa aqui, agora com novalidate -->
+    <form method="POST" action="" novalidate>
+        <!-- Campo oculto para proteção CSRF. Essencial! -->
+        {{ form.hidden_tag() }}
+
+        <!-- Nome do Evento -->
+        <div>
+            {{ form.nome_evento.label }}<br>
+            {{ form.nome_evento(size=30) }}
+            {% for error in form.nome_evento.errors %}
+                <br>
+                <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </div>
+        <br>
+
+        <!-- Data do Evento -->
+        <div>
+            {{ form.data_evento.label }}<br>
+            {{ form.data_evento(type="date") }}
+            {% for error in form.data_evento.errors %}
+                <br>
+                <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </div>
+        <br>
+
+        <!-- Organizador -->
+        <div>
+            {{ form.organizador.label }}<br>
+            {{ form.organizador(size=30) }}
+            {% for error in form.organizador.errors %}
+                <br>
+                <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </div>
+        <br>
+    
+        <!-- Tipo do Evento -->
+        <div>
+            {{ form.tipo_evento.label }}<br>
+            {{ form.tipo_evento() }}
+            {% for error in form.tipo_evento.errors %}
+                <br>
+                <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </div>
+        <br>
+
+        <!-- Descrição -->
+        <div>
+            {{ form.descricao.label }}<br>
+            {{ form.descricao(rows=5, cols=32) }}
+            {% for error in form.descricao.errors %}
+                <br>
+                <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </div>
+        <br>
+
+        <!-- Botão de envio -->
+        <div>
+            {{ form.enviar() }}
+        </div>
+    </form>
+</body>
+</html>
