@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block titulo %}Minhas Receitas{% endblock %}
+{% block conteudo %}
+<h1 class="text-3xl font-bold mb-6 text-gray-800 text-center">Receitas Cadastradas</h1>
+
+{% if receitas %}
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {% for receita in receitas %}
+            <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200 hover:shadow-lg transition duration-200 ease-in-out transform hover:-translate-y-1">
+                <h2 class="text-xl font-semibold mb-3 text-blue-700">
+                    <a href="{{ url_for('visualizar_receita', receita_id=receita.id) }}" class="hover:underline">{{ receita.nome }}</a>
+                </h2>
+                <p class="text-gray-600 text-sm mb-2"><strong>Ingredientes:</strong> <span class="line-clamp-3">{{ receita.ingredientes }}</span></p>
+                <p class="text-gray-600 text-sm"><strong>Modo de Preparo:</strong> <span class="line-clamp-3">{{ receita.modo_preparo }}</span></p>
+                <div class="mt-4 text-right">
+                    <a href="{{ url_for('visualizar_receita', receita_id=receita.id) }}"
+                       class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition duration-150 ease-in-out">
+                        Ver Receita Completa
+                    </a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% else %}
+    <div class="text-center p-10 bg-gray-50 rounded-lg shadow-inner">
+        <p class="text-lg text-gray-600 mb-4">Nenhuma receita cadastrada ainda. Que tal criar uma?</p>
+        <a href="{{ url_for('nova_receita') }}"
+           class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 transition duration-150 ease-in-out">
+            Criar Minha Primeira Receita
+        </a>
+    </div>
+{% endif %}
+{% endblock %}

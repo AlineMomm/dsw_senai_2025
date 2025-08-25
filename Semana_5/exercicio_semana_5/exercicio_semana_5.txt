@@ -1,0 +1,22 @@
+Exercício Prático: Construtor de Receitas Online
+
+Introdução
+O objetivo deste exercício é consolidar os conhecimentos das Semanas 1 a 4, criando uma
+pequena aplicação web para construir receitas de forma simples. O usuário poderá
+preencher um formulário com os ingredientes, o modo de preparo e o nome da receita.
+Após o envio, os dados serão processados e exibidos em uma nova página.
+
+1. Criação da Rota e do Template:
+2. Desenvolvimento do Formulário HTML:
+3. Processamento e Exibição dos Dados:
+4. Validação dos Campos:
+5. Estilização Adicional:
+Dicas para o Exercício
+● Lembre-se de adicionar methods=['GET', 'POST'] à rota do formulário.
+● Passe os dados do formulário para o template ou para a nova rota, como fizemos no
+exemplo da semana 4.
+● Consulte o código app.py e templates/contato.html que já usamos como
+referência para a estrutura do formulário e da lógica de validação.
+● Atenção: As duas textareas devem ser tratadas como campos de texto para a
+validação. O Flask-WTF simplificaria essa parte, mas este exercício é para praticar a
+validação manual.

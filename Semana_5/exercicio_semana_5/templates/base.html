@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block titulo %}Construtor de Receitas{% endblock %}</title>
+    <!-- Inclui Tailwind CSS via CDN para estilização rápida e responsiva -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configuração do Tailwind para usar a fonte Inter -->
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+    </style>
+    <!-- Inclui seu CSS personalizado -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="bg-gray-100 font-sans text-gray-900 antialiased">
+    <header class="bg-gray-800 text-white p-4 shadow-md">
+        <nav class="container mx-auto flex justify-between items-center">
+            <a href="{{ url_for('index') }}" class="text-2xl font-bold hover:text-blue-300 transition duration-150 ease-in-out">
+                🍽️ Construtor de Receitas
+            </a>
+            <a href="{{ url_for('nova_receita') }}"
+               class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg shadow-md transition duration-150 ease-in-out transform hover:scale-105">
+                + Nova Receita
+            </a>
+        </nav>
+    </header>
+    <main class="container mx-auto mt-8 p-4">
+        <!-- Área para mensagens flash -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <div class="messages mb-6">
+                    {% for category, message in messages %}
+                        <div class="alert {{ category }} p-3 rounded-md shadow-sm mb-2" role="alert">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+
+        {% block conteudo %}{% endblock %}
+    </main>
+    <footer class="mt-12 py-4 text-center text-gray-600 text-sm bg-gray-200 shadow-inner">
+        <p>&copy; 2025 Construtor de Receitas Online. Desenvolvido para o Exercício Prático.</p>
+    </footer>
+</body>
+</html>

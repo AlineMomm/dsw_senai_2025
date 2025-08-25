@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block titulo %}{{ receita.nome }}{% endblock %}
+{% block conteudo %}
+<h1 class="text-4xl font-extrabold mb-8 text-gray-800 text-center">{{ receita.nome }}</h1>
+
+<div class="bg-white p-8 rounded-lg shadow-xl border border-gray-200 mb-8">
+    <h3 class="text-2xl font-semibold mb-4 text-gray-700 border-b-2 border-indigo-300 pb-2">Ingredientes</h3>
+    <p class="whitespace-pre-wrap text-gray-700 text-lg leading-relaxed">{{ receita.ingredientes }}</p>
+</div>
+
+<div class="bg-white p-8 rounded-lg shadow-xl border border-gray-200">
+    <h3 class="text-2xl font-semibold mb-4 text-gray-700 border-b-2 border-indigo-300 pb-2">Modo de Preparo</h3>
+    <p class="whitespace-pre-wrap text-gray-700 text-lg leading-relaxed">{{ receita.modo_preparo }}</p>
+</div>
+
+<div class="mt-10 flex flex-col sm:flex-row justify-center gap-4">
+    <a href="{{ url_for('nova_receita') }}"
+       class="inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-150 ease-in-out">
+        Criar Outra Receita
+    </a>
+    <a href="{{ url_for('index') }}"
+       class="inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-medium rounded-md shadow-sm text-blue-700 bg-blue-100 hover:bg-blue-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-150 ease-in-out">
+        Voltar para Todas as Receitas
+    </a>
+</div>
+{% endblock %}

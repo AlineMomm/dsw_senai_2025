@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block titulo %}Criar Nova Receita{% endblock %}
+{% block conteudo %}
+<h1 class="text-3xl font-bold mb-6 text-gray-800 text-center">Criar Nova Receita</h1>
+
+<div class="card bg-white p-6 rounded-lg shadow-md border border-gray-200">
+    <form method="POST" action="{{ url_for('nova_receita') }}" class="space-y-6">
+        <div class="form-group">
+            <label for="nome_receita" class="block text-sm font-medium text-gray-700 mb-1">Nome da Receita:</label>
+            <input type="text" id="nome_receita" name="nome_receita"
+                   value="{{ nome_receita if nome_receita else '' }}"
+                   required
+                   class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+        </div>
+
+        <div class="form-group">
+            <label for="ingredientes" class="block text-sm font-medium text-gray-700 mb-1">Ingredientes:</label>
+            <textarea id="ingredientes" name="ingredientes" rows="7"
+                      required
+                      class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">{{ ingredientes if ingredientes else '' }}</textarea>
+            <p class="mt-2 text-sm text-gray-500">Liste os ingredientes, um por linha ou separados por vírgulas.</p>
+        </div>
+
+        <div class="form-group">
+            <label for="modo_preparo" class="block text-sm font-medium text-gray-700 mb-1">Modo de Preparo:</label>
+            <textarea id="modo_preparo" name="modo_preparo" rows="10"
+                      required
+                      class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">{{ modo_preparo if modo_preparo else '' }}</textarea>
+            <p class="mt-2 text-sm text-gray-500">Descreva o passo a passo da sua receita.</p>
+        </div>
+
+        <button type="submit"
+                class="w-full inline-flex justify-center py-3 px-6 border border-transparent shadow-sm text-lg font-medium rounded-md text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 transition duration-150 ease-in-out">
+            Salvar Receita
+        </button>
+    </form>
+</div>
+{% endblock %}
