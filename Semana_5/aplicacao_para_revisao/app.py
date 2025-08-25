@@ -12,9 +12,9 @@ app.config['SECRET_KEY'] = 'uma-chave-secreta-facil-para-revisao'
 # ---- Conteúdo da Revisão (dados para os templates) ----
 
 # Dados para a Semana 2 (templates e laços de repetição).
-conteudo_semana_2 = {
+conteudo_semana_2 = { # é um dicionário composto
     'titulo': 'Semana 2: Templates com Jinja2',
-    'conceitos': [
+    'conceitos': [ #lista
         'Separação de Lógica e Apresentação (Python vs. HTML)',
         'O que é um Template Engine (Jinja2)',
         'Sintaxe de Expressões ({{ }}): Exibir variáveis',
@@ -118,4 +118,4 @@ def contato():
 # ---- Executa a aplicação ----
 if __name__ == '__main__':
     # Roda a aplicação no modo de depuração.
-    app.run(debug=True)
+    app.run(port=5000, debug=True)
