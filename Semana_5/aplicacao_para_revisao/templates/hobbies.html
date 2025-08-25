@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block titulo %}Meus Hobbies{% endblock %}
+{% block conteudo %}
+<h1>Meus Hobbies</h1>
+<div class="card">
+    <h3>Lista de Hobbies</h3>
+    <ul>
+        {% for hobby in hobbies %}
+            <li>{{ hobby }}</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

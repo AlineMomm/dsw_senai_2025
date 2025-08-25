@@ -115,6 +115,31 @@ def contato():
     # Se a requisição for GET, apenas exibe o formulário.
     return render_template('contato.html')
 
+# Rota para a página 'Sobre'
+@app.route('/sobre')
+def sobre():
+    """Renderiza a página 'Sobre nós'."""
+    return render_template('sobre.html')
+
+# Rota para a página 'Serviços'
+@app.route('/servicos')
+def servicos():
+    """Renderiza a página 'Serviços'."""
+    return render_template('servicos.html')
+
+# Rota para a página de Hobbies (Semana 2)
+@app.route('/hobbies')
+def hobbies():
+    """Renderiza a página com uma lista de hobbies."""
+    meus_hobbies = [
+        'Jogar games',
+        'Ler livros de todos os gêneros (menos autoajuda)',
+        'Estudar',
+        'Assistir filmes clássicos',
+        'Ouvir música (MPB, Rock nacional e internacional, Metal)'
+    ]
+    return render_template('hobbies.html', hobbies=meus_hobbies)
+
 # ---- Executa a aplicação ----
 if __name__ == '__main__':
     # Roda a aplicação no modo de depuração.
